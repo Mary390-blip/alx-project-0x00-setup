@@ -12,3 +12,20 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+import React from "react";
+
+interface CardProps {
+  title: string;
+  description: string;
+}
+
+const Card: React.FC<CardProps> = ({ title, description }) => {
+  return (
+    <div className="border rounded-xl shadow-md p-4 max-w-sm bg-white">
+      <h2 className="text-xl font-bold mb-2">{title}</h2>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+};
+
+export default Card;
