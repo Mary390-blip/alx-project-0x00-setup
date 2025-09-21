@@ -12,3 +12,21 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+import React from "react";
+
+interface PillProps {
+  label: string;
+  color?: string;
+}
+
+const Pill: React.FC<PillProps> = ({ label, color = "bg-blue-500" }) => {
+  return (
+    <span
+      className={`px-3 py-1 text-sm rounded-full text-white ${color}`}
+    >
+      {label}
+    </span>
+  );
+};
+
+export default Pill;
